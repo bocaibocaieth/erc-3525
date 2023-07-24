@@ -180,27 +180,27 @@ interface IERC3525 is IERC165, IERC721 {
 
 **`IERC3525`事件：**
 
-`**TransferValue**`事件：单类代币转账事件，在同`slot`下一个`id`内的`value`进行转账时释放。
+**`TransferValue`** 事件：单类代币转账事件，在同`slot`下一个`id`内的`value`进行转账时释放。
 
-`**ApprovalValue**`事件：授权事件，在当某个`id`内的`value`进行授权时释放。
+**`ApprovalValue`** 事件：授权事件，在当某个`id`内的`value`进行授权时释放。
 
-`**SlotChanged**`事件：slot更改事件，在某个`id`的`slot`被更改时释放。
+**`SlotChanged`** 事件：slot更改事件，在某个`id`的`slot`被更改时释放。
 
 **`IERC3525`函数：**
 
-`**valueDecimals()**` ：获取代币使用的小数位数。
+**`valueDecimals()`** ：获取代币使用的小数位数。
 
-`**balanceOf(uint256 _tokenId)**` ：获取某个`id`的`value`余额。
+**`balanceOf(uint256 _tokenId)`** ：获取某个`id`的`value`余额。
 
-`**slotOf(uint256 _tokenId)**` ：获取某个`id`属于哪一个`slot`。
+**`slotOf(uint256 _tokenId)`** ：获取某个`id`属于哪一个`slot`。
 
-`**approve(uint256 _tokenId, address _operator, uint256 _value)**` ：将调用者某个`id`内的`value`额度授权给`operator`地址。
+**`approve(uint256 _tokenId, address _operator, uint256 _value)`** ：将调用者某个`id`内的`value`额度授权给`operator`地址。
 
-`**allowance(uint256 _tokenId, address _operator)**` ：获取`operator`被允许管理的某个`id`内`value`的最大值。
+**`allowance(uint256 _tokenId, address _operator)`** ：获取`operator`被允许管理的某个`id`内`value`的最大值。
 
-`**transferFrom(uint256 _fromTokenId, uint256 _toTokenId, uint256 _value)**` ：将某一个`id`内的`value`转移至另外一个`id`内。
+**`transferFrom(uint256 _fromTokenId, uint256 _toTokenId, uint256 _value)`** ：将某一个`id`内的`value`转移至另外一个`id`内。
 
-`**transferFrom(uint256 _fromTokenId, address _to, uint256 _value)**` ：将某一个`id`的`value`转移至`to`地址。
+**`transferFrom(uint256 _fromTokenId, address _to, uint256 _value)`** ：将某一个`id`的`value`转移至`to`地址。
 
 ## **`ERC3525`接收合约**
 
