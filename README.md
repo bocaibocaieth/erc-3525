@@ -9,55 +9,6 @@
 而在`ERC3525`中，相比于`ERC1155`的`id`和`value`两层数据结构，`ERC3525`有三层数据结构：`slot`、`id`、`value`；`slot`代表着一个类，每个类（不同的`slot`）下面的`id`都是非同质化的；`id`代表着一个类下的“容器”，而“容器”就是`ERC3525`特色之一，“容器”拥有账户的属性，可以接受、存储、发送和编程数字资产，还可以实现账户的`id`到`id`之间的转账，处在同一个`slot`下不同的`id`之间可以实现拆分组合，而不同`slot`下的`id`无法进行交互（主要根据需求设计）；而每个`id`下有一个`value`来表达同质化的代币数量，类似于`ERC20`的「余额」 属性。
 
 这样，ERC3525就可以实现在同一个合约里管理多种复杂类型的数字资产，并且每个合约有三个网址`uri`来存储它的元数据，除了`ERC3525`的`contractURI`和`slotURI`，由于兼容`ERC721`，`ERC3525`还支持`ERC721`的`tokenURI`。
-
-// SPDX-License-Identifier: MIT
-
-pragma solidity ^0.8.1;
-
-import "../IERC3525.sol";
-import "./IERC721Enumerable.sol";
-/**
-
-- @title ERC-3525 半可替换代币标准，可选扩展用于slot枚举
-- @dev 任何希望支持枚举slots以及具有相同slot的tokens的合约的接口。
-- 参见 [https://eips.ethereum.org/EIPS/eip-3525](https://eips.ethereum.org/EIPS/eip-3525)
-- 注意：此接口的ERC-165标识符为 0x3b741b9e。
-*/
-interface IERC3525SlotEnumerable is IERC3525, IERC721Enumerable {
-    
-    /**
-    
-    - @notice 获取合约存储的slots的总量。
-    - @return slots的总量
-    */
-    function slotCount() external view returns (uint256);
-    
-    /**
-    
-    - @notice 获取合约存储的所有slots中指定索引处的slot。
-    - @param _index slot列表中的索引
-    - @return 所有slots中`index`处的slot。
-    */
-    function slotByIndex(uint256 _index) external view returns (uint256);
-    
-    /**
-    
-    - @notice 获取具有相同slot的tokens的总量。
-    - @param _slot 用于查询token供应量的slot
-    - @return 具有指定`_slot`的tokens的总量
-    */
-    function tokenSupplyInSlot(uint256 _slot) external view returns (uint256);
-    
-    /**
-    
-    - @notice 获取具有相同slot的所有tokens中指定索引处的token。
-    - @param _slot 用于查询tokens的slot
-    - @param _index slot的token列表中的索引
-    - @return 具有`_slot`的所有tokens中`_index`处的token ID
-    */
-    function tokenInSlotByIndex(uint256 _slot, uint256 _index) external view returns (uint256);
-    }
-
 下面是`ERC3525`的元数据接口合约`IERC3525Metadata`：
 
 ```solidity
