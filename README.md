@@ -54,7 +54,8 @@ interface IERC721Metadata is IERC721 {
 
 ERC3525的结构相比于`ERC20`、`ERC721`、`ERC1155`会更复杂更难理解，下图可以让大家快速去理解ERC3525可以表达的数据结构和特征。
 
-![Untitled](ERC-3525%20WTF%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled.png)
+![Untitled](https://github.com/bocaibocaieth/erc-3525/assets/109131974/89d882f0-8ef5-4774-a740-643a85da1983)
+
 
 ## `IERC3525`接口合约[](https://www.wtf.academy/solidity-application/ERC1155/#ierc1155%E6%8E%A5%E5%8F%A3%E5%90%88%E7%BA%A6)
 
