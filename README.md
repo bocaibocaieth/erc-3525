@@ -1,4 +1,4 @@
-# ERC-3525  WTF教学
+# ERC-3525  WTF Solidity极简入门: 58. ERC3525
 
 ## `EIP3525`[](https://www.wtf.academy/solidity-application/ERC1155/#eip1155)
 
