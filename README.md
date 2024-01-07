@@ -261,7 +261,7 @@ interface IERC3525Receiver {
 
 **`slotCount`**: 此函数返回由合约存储的`slot`的总数。没有输入参数，返回值是一个 uint256 类型的数值，代表`slot`的总数。
 
-**`slotByIndex`**: 此函数返回由合约存储的所有`slot`中指定索引处的`slot`。输入参数是一个 uint256 类型的数值 `**_index**`，代表`slot`列表中的索引。返回值是一个 uint256 类型的数值，代表指定索引处的`slot`。
+**`slotByIndex`**: 此函数返回由合约存储的所有`slot`中指定索引处的`slot`。输入参数是一个 uint256 类型的数值 **_index**，代表`slot`列表中的索引。返回值是一个 uint256 类型的数值，代表指定索引处的`slot`。
 
 **`tokenSupplyInSlot`**: 此函数返回具有相同`slot`的所有代币的总数。输入参数是一个 uint256 类型的数值 **`_slot`**，代表要查询代币供应量的`slot`。返回值是一个 uint256 类型的数值，代表指定`slot`的所有代币的总数。
 
@@ -1259,7 +1259,7 @@ function _isContract(address addr_) private view returns (bool) {
 
 ### **拆分函数（Split Function）**
 
-合约中的 **`split`** 函数允许将一个代币的值分割成两个独立的**`id`**。此函数有两个版本：
+合约中的 **`split`** 函数允许将一个代币的值分割成两个独立的**id**。此函数有两个版本：
 
 1. **将指定数量的值分割成一个新代币：**
     
@@ -1352,11 +1352,11 @@ function merge(
 
 ## Remix演示
 
-### 1. 部署`ERC3525**GettingStarted**`合约[](https://www.wtf.academy/solidity-application/ERC1155/#1-%E9%83%A8%E7%BD%B2bayc1155%E5%90%88%E7%BA%A6)
+### 1. 部署ERC3525**GettingStarted**合约[](https://www.wtf.academy/solidity-application/ERC1155/#1-%E9%83%A8%E7%BD%B2bayc1155%E5%90%88%E7%BA%A6)
 
 ![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/b1f0cf96-355b-4bc9-b293-373eb62a23ab)
 
-### 2**. `mint`并查看`id`所属`slot`和`value`**
+### 2. **mint并查看id所属slot和value**
 
 ![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/eb72d25f-10ca-44fa-b4fe-e1b902f6b27a)
 
