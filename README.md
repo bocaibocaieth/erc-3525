@@ -180,27 +180,27 @@ interface IERC3525 is IERC165, IERC721 {
 
 **`IERC3525`事件：**
 
-`**TransferValue**`事件：单类代币转账事件，在同`slot`下一个`id`内的`value`进行转账时触发。
+**TransferValue**事件：单类代币转账事件，在同`slot`下一个`id`内的`value`进行转账时触发。
 
-`**ApprovalValue**`事件：授权事件，在当某个`id`内的`value`进行授权时触发。
+**ApprovalValue**事件：授权事件，在当某个`id`内的`value`进行授权时触发。
 
-`**SlotChanged**`事件：slot更改事件，在某个`id`的`slot`被更改时触发。
+**SlotChanged**事件：slot更改事件，在某个`id`的`slot`被更改时触发。
 
 **`IERC3525`函数：**
 
-`**valueDecimals()**` ：获取代币使用的小数位数。
+**valueDecimals()** ：获取代币使用的小数位数。
 
-`**balanceOf(uint256 _tokenId)**` ：获取某个`id`的`value`余额。
+**balanceOf(uint256 _tokenId)** ：获取某个`id`的`value`余额。
 
-`**slotOf(uint256 _tokenId)**` ：获取某个`id`属于哪一个`slot`。
+**slotOf(uint256 _tokenId)** ：获取某个`id`属于哪一个`slot`。
 
-`**approve(uint256 _tokenId, address _operator, uint256 _value)**` ：将调用者某个`id`内的`value`额度授权给`operator`地址。
+**approve(uint256 _tokenId, address _operator, uint256 _value)** ：将调用者某个`id`内的`value`额度授权给`operator`地址。
 
-`**allowance(uint256 _tokenId, address _operator)**` ：获取`operator`被允许管理的某个`id`内`value`的最大值。
+**allowance(uint256 _tokenId, address _operator)** ：获取`operator`被允许管理的某个`id`内`value`的最大值。
 
-`**transferFrom(uint256 _fromTokenId, uint256 _toTokenId, uint256 _value)**` ：将某一个`id`内的`value`转移至另外一个`id`内。
+**transferFrom(uint256 _fromTokenId, uint256 _toTokenId, uint256 _value)** ：将某一个`id`内的`value`转移至另外一个`id`内。
 
-`**transferFrom(uint256 _fromTokenId, address _to, uint256 _value)**` ：将某一个`id`的`value`转移至`to`地址。
+**transferFrom(uint256 _fromTokenId, address _to, uint256 _value)** ：将某一个`id`的`value`转移至`to`地址。
 
 ## **`ERC3525`接收合约**
 
@@ -1255,7 +1255,7 @@ function _isContract(address addr_) private view returns (bool) {
 
 可以在[https://notes.3525.link/](https://notes.3525.link/)体验ERC-3525官方的Cryptonotes示范，Cryptonotes源代码Github：[https://github.com/crypto-notes/protocol/blob/main/contracts/Cryptonotes.sol](https://github.com/crypto-notes/protocol/blob/main/contracts/Cryptonotes.sol)
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%201.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/25ed8434-a091-41df-91a2-5a8db77871d0)
 
 ### **拆分函数（Split Function）**
 
@@ -1354,45 +1354,45 @@ function merge(
 
 ### 1. 部署`ERC3525**GettingStarted**`合约[](https://www.wtf.academy/solidity-application/ERC1155/#1-%E9%83%A8%E7%BD%B2bayc1155%E5%90%88%E7%BA%A6)
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%202.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/b1f0cf96-355b-4bc9-b293-373eb62a23ab)
 
 ### 2**. `mint`并查看`id`所属`slot`和`value`**
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%203.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/eb72d25f-10ca-44fa-b4fe-e1b902f6b27a)
 
 `ownerOf`一栏中输入`id`查看对应的owner
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%204.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/f0251322-091d-4f39-b343-6e224261bcc2)
 
 `slotOf`一栏中输入`id`查看对应的`slot`
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%205.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/4d145d85-e53a-4034-a9f8-b4145ced69e4)
 
 `balanceOf`一栏中输入`id`查看对应的`value`
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%206.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/b9079ddd-ae0e-4d4f-a46f-044613220a9c)
 
 ### 3. `mint`并使用`id`给`id`转账
 
 `mint`给地址2
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%207.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/994b2f16-05df-4448-87b8-be9f90a8c6f4)
 
 `totalSupply`返回两个`id`
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%208.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/302a11bf-7e38-43b1-9208-36a579f1346f)
 
 `id`1转移50`value`给`id`2
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%209.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/619fc551-a2a1-4512-b8e4-819c1189a9a1)
 
 `balaceOf`查看`id`1的`value`
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%2010.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/f8d50647-6f27-4f0c-b8fb-f5e9e8f1b71d)
 
 `balaceOf`查看`id`2的`value`
 
-![Untitled](ERC-3525%20WTF%E6%95%99%E5%AD%A6%2008d213a9f6a04c2884b96bdce9a47c9c/Untitled%2011.png)
+![image](https://github.com/bocaibocaieth/erc-3525/assets/109131974/c677af2e-aedb-47ba-a31d-e4cb0675bda4)
 
 ## 总结[](https://www.wtf.academy/solidity-application/ERC1155/#%E6%80%BB%E7%BB%93)
 
