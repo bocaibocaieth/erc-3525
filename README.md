@@ -404,23 +404,23 @@ Github源代码：[https://github.com/solv-finance/erc-3525/blob/main/contracts/
 
 `ERC3525`主合约包含9个状态变量：
 
-**`_name`**: 一个**`string`**类型的私有变量，代表了此合约的名称。
+**`_name`**: 一个**string**类型的私有变量，代表了此合约的名称。
 
-**`_symbol`**: 一个**`string`**类型的私有变量，代表了此合约的符号。
+**`_symbol`**: 一个**string**类型的私有变量，代表了此合约的符号。
 
-**`_decimals`**: 一个**`uint8`**类型的私有变量，代表了此合约的小数位数。
+**`_decimals`**: 一个**uint8**类型的私有变量，代表了此合约的小数位数。
 
-**`_tokenIdGenerator`**: **`Counters.Counter`**类型的私有变量，用于生成唯一的代币ID。
+**`_tokenIdGenerator`**: **Counters.Counter**类型的私有变量，用于生成唯一的代币ID。
 
-**`_approvedValues`**: 这是一个嵌套的**`mapping`**类型私有变量，用于存储每个代币ID对应的被批准的值（通过另一个映射将批准者地址映射到值）。
+**`_approvedValues`**: 这是一个嵌套的**mapping**类型私有变量，用于存储每个代币ID对应的被批准的值（通过另一个映射将批准者地址映射到值）。
 
-**`_allTokens`**: 这是一个**`TokenData`**结构体数组，存储了所有的代币。
+**`_allTokens`**: 这是一个**TokenData**结构体数组，存储了所有的代币。
 
-**`_allTokensIndex`**: 这是一个**`mapping`**类型的私有变量，用于存储每个代币ID对应的索引。
+**`_allTokensIndex`**: 这是一个**mapping**类型的私有变量，用于存储每个代币ID对应的索引。
 
-**`_addressData`**: 这是一个**`mapping`**类型的私有变量，将地址映射到**`AddressData`**结构，存储了与每个地址相关的数据。
+**`_addressData`**: 这是一个**mapping**类型的私有变量，将地址映射到**AddressData**结构，存储了与每个地址相关的数据。
 
-**`metadataDescriptor`**: 这是一个公开的**`IERC3525MetadataDescriptor`**类型变量，它是一个接口，用于描述元数据。
+**`metadataDescriptor`**: 这是一个公开的**IERC3525MetadataDescriptor**类型变量，它是一个接口，用于描述元数据。
 
 ### `ERC3525`函数[](https://www.wtf.academy/solidity-application/ERC1155/#erc1155%E5%87%BD%E6%95%B0)
 
